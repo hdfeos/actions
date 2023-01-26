@@ -31,7 +31,7 @@ jobs:
           cd hdf-eos2-3.0
           cat /usr/local/bin/h4cc
           echo $LD_LIBRARY_PATH
-          ./configure CC=/usr/local/bin/h4cc LDFLAGS="-L/usr/local/lib" --prefix=/usr/local/ --enable-install-include
+          ./configure CC=/usr/local/bin/h4cc LDFLAGS="-L/usr/local/lib -lmfhdf" --prefix=/usr/local/ --enable-install-include
           cat config.log
           make
           make check
