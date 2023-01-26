@@ -20,6 +20,7 @@ jobs:
           cat config.log
           make 
           sudo make install
+          ls /usr/local/lib
           cd ..
           rm -rf hdf-4.2.15 hdf-4.2.15.tar.gz 
       - name: Install HDF-EOS2
