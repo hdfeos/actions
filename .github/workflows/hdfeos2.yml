@@ -18,7 +18,8 @@ jobs:
           cd hdf-4.2.15
           ./configure --prefix=/usr/local --enable-shared --enable-hdf4-xdr -disable-fortran --disable-netcdf
           cat config.log
-          make 
+          make
+          make check
           sudo make install
           ls /usr/local/lib
           cd ..
