@@ -22,9 +22,6 @@ jobs:
           sudo make install
           cd ..
           rm -rf hdf-4.2.15 hdf-4.2.15.tar.gz 
-          make
-          make check
-          sudo make install
       - name: Install HDF-EOS2
         run: |
           wget -O hdfeos.tar.gz "https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz?at=3128a738021501c821549955f6c78348e5f33850"
