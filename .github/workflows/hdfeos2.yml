@@ -28,7 +28,7 @@ jobs:
           tar zxvf hdfeos.tar.gz
           cd hdf-eos2-3.0
           echo $LD_LIBRARY_PATH
-          ./configure LDFLAGS="-L/usr/local/lib -lmfhdf" --prefix=/usr/local/ --enable-install-include
+          ./configure LDFLAGS="-L/usr/local/lib -lmfhdf" --prefix=/usr/local/ --enable-shared --enable-install-include
           cat config.log
           make
           make check
