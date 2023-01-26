@@ -27,7 +27,11 @@ jobs:
           wget -O hdfeos.tar.gz "https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz?at=3128a738021501c821549955f6c78348e5f33850"
           tar zxvf hdfeos.tar.gz
           cd hdf-eos2-3.0
-          ./configure CC=/usr/local/bin/h4cc --prefix=/usr/local/ --enable-install-include
+          cat /usr/local/bin/h4cc
+          echo $LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH
+          ./configure CC=/usr/local/bin/h4cc LDFLAGS="-L/usr/local/lib" --prefix=/usr/local/ --enable-install-include
+          cat config.log
           make
           make check
           sudo make install
