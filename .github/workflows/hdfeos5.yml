@@ -17,9 +17,9 @@ jobs:
           tar zxvf HDF-EOS5.2.0.tar.gz
           cd hdf-eos5-2.0
           ./configure CC=/usr/local/bin/h5cc --prefix=/usr/local/ --enable-install-include        
-          wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.19/src/hdf5-1.8.19.tar.gz
-          tar zxvf hdf5-1.8.19.tar.gz
-          cd hdf5-1.8.19
+          wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.22/src/hdf5-1.8.22.tar.gz
+          tar zxvf hdf5-1.8.22.tar.gz
+          cd hdf5-1.8.22
           ./configure --prefix=/usr/local  --with-default-api-version=v16
           make
           make check
