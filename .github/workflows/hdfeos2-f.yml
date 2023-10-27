@@ -16,7 +16,7 @@ jobs:
           wget https://support.hdfgroup.org/ftp/HDF/releases/HDF4.2.15/src/hdf-4.2.15.tar.gz
           tar zxvf hdf-4.2.15.tar.gz
           cd hdf-4.2.15
-          ./configure --prefix=/usr/local --enable-shared --enable-hdf4-xdr --enable-fortran --disable-netcdf
+          ./configure --prefix=/usr/local --disable-shared --enable-hdf4-xdr --enable-fortran --disable-netcdf
           make
           sudo make install
           cd ..
@@ -26,7 +26,7 @@ jobs:
           wget -O hdfeos.tar.gz "https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz?at=3128a738021501c821549955f6c78348e5f33850"
           tar zxvf hdfeos.tar.gz
           cd hdf-eos2-3.0
-          ./configure LDFLAGS="-L/usr/local/lib -lmfhdf" --prefix=/usr/local/ --enable-shared --enable-install-include --enable-fortran
+          ./configure LDFLAGS="-L/usr/local/lib -lmfhdf" --prefix=/usr/local/ --disable-shared --enable-install-include --enable-fortran
           make
           make check
           sudo make install
