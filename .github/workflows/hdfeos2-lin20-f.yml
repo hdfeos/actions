@@ -1,11 +1,11 @@
-name: hdfeos f
+name: hdfeos lin20 f
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   build:
     name: Build hdfeos
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Install Autotools Dependencies (Linux)
         run: |
